@@ -112,7 +112,7 @@ public:
         pchMessageStart[1] = 0x75;
         pchMessageStart[2] = 0xfd;
         pchMessageStart[3] = 0x39;
-        vAlertPubKey = ParseHex("0317dc37cb1011c0a262fc113352cdad2a12b85a0f441c4c48346bd85f45ec5c1d");
+        vAlertPubKey = ParseHex("0000098d3ba6ba6e8423fa5ccd6a89e0a9a5348f88d332b44a5cb1a8b7ed2c1e11335fc8dc4f012cb8241cc0bdafd6ca70c5f4448916e4e6f511bcd746ed57dc52");
         nDefaultPort = 45224;
         bnProofOfWorkLimit = ~uint256(0) >> 20; // Novatech starting difficulty is 1 / 2^12
         nSubsidyHalvingInterval = 210000;
@@ -125,7 +125,7 @@ public:
         nTargetSpacing = 1 * 60;  // Novatech: 1 minute
         nMaturity = 10;
         nMasternodeCountDrift = 20;
-        nMaxMoneyOut = 4000000 * COIN;
+        nMaxMoneyOut = 21000000 * COIN;
 
         /** Height or Time Based Activations **/
         nLastPOWBlock = 291;
