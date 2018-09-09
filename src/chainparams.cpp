@@ -112,7 +112,7 @@ public:
         pchMessageStart[1] = 0x75;
         pchMessageStart[2] = 0xfd;
         pchMessageStart[3] = 0x39;
-        vAlertPubKey = ParseHex("0000098d3ba6ba6e8423fa5ccd6a89e0a9a5348f88d332b44a5cb1a8b7ed2c1e11335fc8dc4f012cb8241cc0bdafd6ca70c5f4448916e4e6f511bcd746ed57dc52");
+        vAlertPubKey = ParseHex("04678afdb0fe5548271967f1a67130b7105cd6a828e03909a67962e0ea1f61deb649f6bc3f4cef38c4f35504e51ec112de5c384df7ba0b8d578a4c702b6bf11d5f");
         nDefaultPort = 45224;
         bnProofOfWorkLimit = ~uint256(0) >> 20; // Novatech starting difficulty is 1 / 2^12
         nSubsidyHalvingInterval = 210000;
@@ -152,24 +152,24 @@ public:
          *     CTxOut(nValue=50.00000000, scriptPubKey=0xA9037BAC7050C479B121CF)
          *   vMerkleTree: e0028e
          */
-        const char* pszTimestamp = "España 09/09/2018 Dev Bitcoin nova (novatech)";
+        const char* pszTimestamp = "Don't work for weekends, work for our goals.";
         CMutableTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
         txNew.vin[0].scriptSig = CScript() << 486604799 << CScriptNum(4) << vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
         txNew.vout[0].nValue = 1 * COIN;
-        txNew.vout[0].scriptPubKey = CScript() << ParseHex("04c10e83b2703ccf322f7dbd62dd5855ac7c10bd055814ce121ba32607d573b8810c02c0582aed05b4deb9c4b77b26d92428c61256cd42774babea0a073b2ed0c9") << OP_CHECKSIG;
+        txNew.vout[0].scriptPubKey = CScript() << ParseHex("04678afdb0fe5548271967f1a67130b7105cd6a828e03909a67962e0ea1f61deb649f6bc3f4cef38c4f35504e51ec112de5c384df7ba0b8d578a4c702b6bf11d5f") << OP_CHECKSIG;
         genesis.vtx.push_back(txNew);
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
         genesis.nVersion = 1;
-        genesis.nTime = 1530876192;
-        genesis.nBits = 0x1e0ffff0;
-        genesis.nNonce = 1958679;
+        genesis.nTime = 1536512084;
+        genesis.nBits = 504365040;
+        genesis.nNonce = 473989;
 
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0x000005d6f15ffaf770795716df36a7f4f18bec7dc829ba445b712dea17439e26"));
-        assert(genesis.hashMerkleRoot == uint256("0x56f4eab3dcd54dc4da2b1376928c5d5f86d8f958e05d023741d0ec11d6385c44"));
+        assert(hashGenesisBlock == uint256("0x000008a39a839e117701b8e37dc56da37acc801f4c1f76d3d0704f20e15cfecd"));
+        assert(genesis.hashMerkleRoot == uint256("0xf5239467dd2a9dd0fce7a3babc03c7985eab2229c62e3d5670375f305753c9cc"));
 
         vSeeds.push_back(CDNSSeedData("85.214.158.156", "85.214.158.156"));     // Primary DNS Seeder from Fuzzbawls
         vSeeds.push_back(CDNSSeedData("37.187.55.149", "37.187.55.149w"));      // Secondary DNS Seeder from Fuzzbawls
@@ -272,7 +272,7 @@ public:
         genesis.nNonce = 2402015;
 
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0x000005d6f15ffaf770795716df36a7f4f18bec7dc829ba445b712dea17439e26"));
+        assert(hashGenesisBlock == uint256("0x000008a39a839e117701b8e37dc56da37acc801f4c1f76d3d0704f20e15cfecd"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
