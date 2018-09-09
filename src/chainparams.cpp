@@ -53,7 +53,7 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 // + Contains no strange transactions
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
-    (1, uint256("1c9121bf9329a6234bfd1ea2d91515f19cd96990725265253f4b164283ade5dd"));
+//    (1, uint256("1c9121bf9329a6234bfd1ea2d91515f19cd96990725265253f4b164283ade5dd"));
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
     1531879390, // * UNIX timestamp of last checkpoint block
@@ -112,7 +112,7 @@ public:
         pchMessageStart[1] = 0x75;
         pchMessageStart[2] = 0xfd;
         pchMessageStart[3] = 0x39;
-        vAlertPubKey = ParseHex("0211dc32cb1011caa162fc113358ddad2a13c84a0f841c4c48346bd85f45ec5c1e");
+        vAlertPubKey = ParseHex("0317dc37cb1011c0a262fc113352cdad2a12b85a0f441c4c48346bd85f45ec5c1d");
         nDefaultPort = 45224;
         bnProofOfWorkLimit = ~uint256(0) >> 20; // Novatech starting difficulty is 1 / 2^12
         nSubsidyHalvingInterval = 210000;
@@ -152,7 +152,7 @@ public:
          *     CTxOut(nValue=50.00000000, scriptPubKey=0xA9037BAC7050C479B121CF)
          *   vMerkleTree: e0028e
          */
-        const char* pszTimestamp = "U.S. News & World Report Jan 28 2016 With His Absence, Trump Dominates Another Debate";
+        const char* pszTimestamp = "España 09/09/2018 Dev Bitcoin nova (novatech)";
         CMutableTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
@@ -165,11 +165,11 @@ public:
         genesis.nVersion = 1;
         genesis.nTime = 1530876192;
         genesis.nBits = 0x1e0ffff0;
-        genesis.nNonce = 1460742;
+        genesis.nNonce = 1958679;
 
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256(""));
-        assert(genesis.hashMerkleRoot == uint256(""));
+        assert(hashGenesisBlock == uint256("0x000005d6f15ffaf770795716df36a7f4f18bec7dc829ba445b712dea17439e26"));
+        assert(genesis.hashMerkleRoot == uint256("0x56f4eab3dcd54dc4da2b1376928c5d5f86d8f958e05d023741d0ec11d6385c44"));
 
         vSeeds.push_back(CDNSSeedData("85.214.158.156", "85.214.158.156"));     // Primary DNS Seeder from Fuzzbawls
         vSeeds.push_back(CDNSSeedData("37.187.55.149", "37.187.55.149w"));      // Secondary DNS Seeder from Fuzzbawls
@@ -242,7 +242,7 @@ public:
         pchMessageStart[1] = 0x76;
         pchMessageStart[2] = 0x65;
         pchMessageStart[3] = 0xba;
-        vAlertPubKey = ParseHex("000010e83b2703ccf322f7dbd62dd5855ac7c10bd055814ce121ba32607d573b8810c02c0582aed05b4deb9c4b77b26d92428c61256cd42774babea0a073b2ed0c9");
+        vAlertPubKey = ParseHex("04c10e83b2703ccf322f7dbd62dd5855ac7c10bd055814ce121ba32607d573b8810c02c0582aed05b4deb9c4b77b26d92428c61256cd42774babea0a073b2ed0c9");
         nDefaultPort = 51474;
         nEnforceBlockUpgradeMajority = 51;
         nRejectBlockOutdatedMajority = 75;
@@ -272,7 +272,7 @@ public:
         genesis.nNonce = 2402015;
 
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256(""));
+        assert(hashGenesisBlock == uint256("0x000005d6f15ffaf770795716df36a7f4f18bec7dc829ba445b712dea17439e26"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
